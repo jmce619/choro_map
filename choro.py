@@ -67,6 +67,7 @@ for _, row in map_gdf.iterrows():
                 f"State: {row['state_name']}<br>"
                 f"District: {row['district']}<br>"
                 f"Party: {row['winner_party']}<br>"
+                f"Candidate: {row['winner_name']}<br>"
                 f"Votes: {row['winner_votes']}<br>"
                 f"Percentage: {row['winner_percentage']}%"
             )
@@ -86,5 +87,4 @@ fig.update_layout(
 # If you have a Mapbox token:
 # fig.update_layout(mapbox_accesstoken="YOUR_MAPBOX_TOKEN")
 
-st.title("Election Results Map")
 st.plotly_chart(fig, use_container_width=True)
